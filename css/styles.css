@@ -31,6 +31,9 @@ body{
 
 /* INICIO */
 
+.desktop-menu{
+    display: none;
+}
 .main-section{
     height: 100vmax;
     background-color: var(--bgc);
@@ -40,9 +43,9 @@ body{
     text-align: center;
 }
 .title-index{
-    position:relative;
-    margin-bottom: 3vmax;
-    padding-top: 20vmax;
+    position: relative;
+    margin-bottom: 2vmax;
+    padding-top: 15vmax;
     font-size: 4vmax;
     font-family: var(--font-title);
     font-weight: 500;
@@ -78,15 +81,13 @@ body{
 }
 
 .ln-gh-container{
-    display: grid;
-    grid-template-columns: .10fr .90fr;
-    grid-template-rows: .50fr .50fr;
-    gap: 2vmin;
-    justify-items: left;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
     align-items: center;
     height: 12vmax;
     width: 58vmin;
-    margin-top: 10vmax;
+    margin-top: 9vmax;
     margin-left: auto;
     margin-right: auto;
     font-size: 2.5vmax;
@@ -96,6 +97,8 @@ body{
 }
 .ln-gh-container img{
     width: 8vmin;
+    margin-top: 1.5vmax;
+    margin-bottom: 1vmax;
 }
 .ln-gh-container a{
     text-decoration:none;
@@ -107,7 +110,7 @@ body{
     height: 5vmax;
     justify-content: center;
     align-items: center;
-    margin-top: 10vmax;
+    margin-top: 12vmax;
     margin-right: auto;
     margin-left: auto;
     font-size: 2vmax;
@@ -121,6 +124,7 @@ body{
     text-shadow: 0 0 29px var(--main-color);
     box-shadow: 0 0 16px var(--main-color);
     animation: neonBtn 2s ease-in-out 5s forwards;
+    transition: 0.5s ease;
     visibility: hidden;
     
 }
@@ -157,7 +161,10 @@ body{
 }
 
 .behind-this-project-btn:active,
+.behind-this-project-btn:hover,
+.hide-info-btn:hover,
 .hide-info-btn:active,
+.see-my-job-btn:hover,
 .see-my-job-btn:active{
     border: 1px solid var(--bgc);
     color: var(--bgc);
@@ -223,7 +230,7 @@ body{
 }
 .title-container{
     position: relative;
-    margin-top: 5vmax;
+    margin-top: 2vmax;
     font-family: var(--font-title);
     font-size: 4vmax;
     color: var(--main-color);
@@ -365,6 +372,7 @@ body{
     border-radius: 10px;
     text-decoration: none;
     cursor: pointer;
+    transition: 0.5s ease;
 }
 .info{
     position: absolute;
@@ -431,6 +439,8 @@ body{
     border: 1px solid var(--main-color);
     border-radius: 10px;
     cursor: pointer;
+
+    transition: 0.5s ease;
 }
 
 /* CONTACT */
@@ -474,6 +484,8 @@ body{
     margin-top: 3vmax;
     margin-bottom: 5vmax;
     text-align: center;
+
+    transition: 0.5s ease;
 }
 /* MENU */
 
@@ -503,11 +515,11 @@ body{
 .items-wrapper{
     position: fixed;
     bottom: 35px;
-    right: 115px;
+    right: 130px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 30px;
+    width: 10px;
     height: 50px;
     background: black;
     border: 1px solid var(--sec-color);
@@ -621,7 +633,7 @@ body{
         margin-right: auto;
         margin-left: auto;
         color: var(--main-color);
-    
+        
         visibility: hidden;
     }
     .arrows path{
@@ -639,5 +651,129 @@ body{
     .arrows path.a3 {	
         animation-delay:7s;
     
+    }
+
+    .title-container{
+        position: relative;
+        margin-top: 3vmax;
+        font-family: var(--font-title);
+        font-size: 4vmax;
+        color: var(--main-color);
+        filter: brightness(.95);
+        text-shadow: 0 0 20px var(--main-color);
+    }
+    .title-container::after{
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* DESKTOP MENU */
+
+    .desktop-menu{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+
+        height: 100vmin;
+        width: 6.5vmax;
+
+        font-size: 2vmin;
+        font-family: var(--font-content);
+        color: var(--sec-color);
+        border-left: 1px solid var(--main-color);
+        box-shadow: 0 0 10px var(--sec-color);
+        background-color: var(--glass-color);
+
+        visibility: hidden;
+
+    }
+    .menu-icon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        
+        height: 9vmin;
+        margin: 2vmin 1vmin 2vmin 1vmin;
+    }
+    .menu-icon:hover,
+    .menu-icon:active{
+        filter: invert(13%) sepia(91%) saturate(4999%) hue-rotate(275deg) brightness(110%) contrast(91%);
+    }
+    .active{
+        filter: invert(13%) sepia(91%) saturate(4999%) hue-rotate(275deg) brightness(110%) contrast(91%);
+    }
+    .menu-icon img{
+        width: 2vmax;
+    }
+    .menu-icon a{
+        text-decoration: none;
+        color: var(--sec-color);
+    }
+    /* ABOUT ME*/
+
+    .about-me-section{
+      display: flex;   
+      font-family: var(--font-content);
+      padding-top: 3vmax;
+      height: fit-content;
+      background-color: var(--bgc);
+      color: var(--main-color);  
+    
+    }
+
+    .about-me-content-container{
+        display: flex;
+        justify-content: space-around;
+        width: 95vmax;
+    }
+    .mypic{
+        display: block;
+        margin-top: 10vmax;
+        width: 25vmax;
+        height: 25vmax;
+        border: 1px solid var(--bgc);
+        border-radius: 20px;  
+        box-shadow: 0 0 20px var(--main-color); 
+
+        visibility: hidden;
+    }   
+    .about-me-text-container{
+        margin-top: 8vmax;
+        padding-bottom: 50px;
+        width: 50vmax;
+        color: var(--sec-color);
+        font-size: 3vmin;
+    }
+    .about-me-text-container h2{
+        margin-top: 2vmax;
+        margin-bottom: 2vmax;
+        font-size: 5vmin;
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio-section{
+        display: flex;   
+        font-family: var(--font-content);
+        padding-top: 3vmax;
+        background-color: var(--bgc);
+        color: var(--main-color);    
+    }
+    .portfolio-project-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 85vmax;
+        margin-top: 5vmin;
+
+    }
+    .project-card{
+        margin: 3vmax 2vmax 5vmax 2vmax;
     }
 }

@@ -70,10 +70,11 @@ cardContainer.addEventListener('click', (element) => {
 })
 
 
-//FLOATING MENU 
+//FLOATING MENU (MOBILE)
 
 const menuBtn = document.getElementById('menu');
-        const iconWrapper = document.getElementById('items-wrapper');
+        
+const iconWrapper = document.getElementById('items-wrapper');
 
         menuBtn.addEventListener('click', ()=> {
 
@@ -105,16 +106,77 @@ const menuBtn = document.getElementById('menu');
 window.addEventListener("scroll", () => {
         
     let navArea = document.getElementById("navArea");
+    let desktopMenuArea = document.getElementById("desktopMenuArea");
 
     navArea.classList.add("is-sticky", "lazyAnimateIn");
+    desktopMenuArea.classList.add("is-sticky", "lazyAnimateIn");
     
 }); 
 
 window.addEventListener("touchmove", () => {
 
-    console.log("Scrolleaste con el dedo");
-
     let navArea = document.getElementById("navArea");
 
     navArea.classList.add("is-sticky", "lazyAnimateIn");
 })
+
+
+//DESKTOP MENU
+
+let homeIcon = document.getElementById('homeIcon');
+let aboutMeIcon = document.getElementById('aboutMeIcon');
+let portfolioIcon = document.getElementById('portfolioIcon');
+let contactMeIcon = document.getElementById('contactIcon');
+
+
+//guardo todos los elementos que quiera que detecte
+const observedTitles = document.getElementsByTagName('SECTION');
+//que ocurrirá cuando el elemento está en el campo de vision?
+const callback1 = (entries) => {
+    //recorro todos esos objetos que voy a observar
+    entries.forEach(entry => {
+        if(entry.isIntersecting){ //si el objeto entra en nuestra vision
+            
+            if(entry.target.classList.contains("main-section")){
+                homeIcon.classList.add("active");
+
+                aboutMeIcon.classList.remove("active");
+                portfolioIcon.classList.remove("active");
+                contactMeIcon.classList.remove("active");
+                console.log("viste home");
+            }
+            else if(entry.target.classList.contains("about-me-section")){
+                aboutMeIcon.classList.add("active");
+
+                homeIcon.classList.remove("active");
+                portfolioIcon.classList.remove("active");
+                contactMeIcon.classList.remove("active");
+                console.log("viste aboutme");
+            }
+            else if(entry.target.classList.contains("portfolio-section")){
+                portfolioIcon.classList.add("active");
+
+                homeIcon.classList.remove("active");
+                aboutMeIcon.classList.remove("active");
+                contactMeIcon.classList.remove("active");
+                console.log("viste portfolio");
+            }
+            else if(entry.target.classList.contains("contact-section")){
+                contactMeIcon.classList.add("active");
+
+                homeIcon.classList.remove("active");
+                aboutMeIcon.classList.remove("active");
+                portfolioIcon.classList.remove("active");
+                console.log("viste contact");
+            }
+        }
+    });
+}
+const options1 = {
+    threshold: 0.10 //cuando vea un 45% de la imagen, la detecta como dentro del rango de vision
+}
+const observer1 = new IntersectionObserver(callback1, options1);
+
+for( title of observedTitles){
+    observer1.observe(title)
+}
