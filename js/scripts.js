@@ -77,8 +77,6 @@ const menuBtn = document.getElementById('menu');
 const iconWrapper = document.getElementById('items-wrapper');
 
         menuBtn.addEventListener('click', ()=> {
-
-            console.log("presionaron el menu");
         
             if(menuBtn.classList.contains('rotateMenuOpen')){
                 menuBtn.classList.remove('rotateMenuOpen');
@@ -143,7 +141,6 @@ const callback1 = (entries) => {
                 aboutMeIcon.classList.remove("active");
                 portfolioIcon.classList.remove("active");
                 contactMeIcon.classList.remove("active");
-                console.log("viste home");
             }
             else if(entry.target.classList.contains("about-me-section")){
                 aboutMeIcon.classList.add("active");
@@ -151,7 +148,7 @@ const callback1 = (entries) => {
                 homeIcon.classList.remove("active");
                 portfolioIcon.classList.remove("active");
                 contactMeIcon.classList.remove("active");
-                console.log("viste aboutme");
+                
             }
             else if(entry.target.classList.contains("portfolio-section")){
                 portfolioIcon.classList.add("active");
@@ -159,7 +156,7 @@ const callback1 = (entries) => {
                 homeIcon.classList.remove("active");
                 aboutMeIcon.classList.remove("active");
                 contactMeIcon.classList.remove("active");
-                console.log("viste portfolio");
+                
             }
             else if(entry.target.classList.contains("contact-section")){
                 contactMeIcon.classList.add("active");
@@ -167,7 +164,7 @@ const callback1 = (entries) => {
                 homeIcon.classList.remove("active");
                 aboutMeIcon.classList.remove("active");
                 portfolioIcon.classList.remove("active");
-                console.log("viste contact");
+                
             }
         }
     });
@@ -180,3 +177,11 @@ const observer1 = new IntersectionObserver(callback1, options1);
 for( title of observedTitles){
     observer1.observe(title)
 }
+
+
+
+
+
+
+
+

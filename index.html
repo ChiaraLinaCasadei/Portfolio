@@ -89,14 +89,14 @@
             <img src="/assets/img/media/aboutmephoto.jpg" alt="Chiara Casadei" class="mypic lazy">
             
             <div class="about-me-text-container">
-                <h2>Formación Académica</h2>
-                <p>Me introduje en desarrollo web como parte del programa "Digitalers" de Telecom. Ya contaba con experiencia en Algoritmos y Estructuras de Datos debido a los primeros años en la carrera de Ingeniería en Sistemas de Información (Universidad Tecnológica Nacional)</p>
-                <p>En el año 2021 decidí dedicarme por completo a ese área, valiéndome de mi conocimiento como Desarrolladora .NET adquirido en Educacion IT, y otras tecnologías de las que me formé mediante cursos asíncronos (Udemy, Coursera, etc.)</p>
-                <h2>¿Por qué lo elegí?</h2>
-                <p>Me gustó el desarrollo porque actualmente hay muchos proyectos en proceso de emerger que no tienen la suficiente visibilidad por no estar en la Web.</p>
-                <p>Es motivador contribuír al éxito de grandes ideas.</p>
-                <h2>Actualidad</h2>
-                <p>Me encuentro perfeccionándome en tecnologías ya vistas, aprendiendo sobre .NET Core y patrones de diseño en Educacion IT, gracias a la beca que me fue otorgada al finalizar los cursos de C# .NET Developer.</p>      
+                <h2>Academic Training</h2>
+                <p>I was introduced to web development as part of Telecom's "Digitalers" program. I already had experience in Algorithms and Data Structures due to my first years in the career of Information Systems Engineering (National Technological University)</p>
+                <p>In 2021 I decided to dedicate completely to that area, using my knowledge as a .NET Developer acquired in "EducacionIT" and other technologies that I was trained with through asynchronous courses (Udemy, Coursera, etc.)</p>
+                <h2>¿Why Web Development?</h2>
+                <p>I decided to form in web development because there are currently many projects in process of emerging that don't have enough visibility due to their lack of Internet presence.</p>
+                <p>It is motivating and rewarding to be able to contribute to the success of great ideas.</p>
+                <h2>Present</h2>
+                <p>I'm perfecting myself in technologies already seen, learning about .NET Core and design patterns at "EducacionIT", thanks to the scholarship that was awarded to me at the end of the C # .NET Developer courses, in the year 2020.</p>      
                             
             </div>
 
@@ -290,22 +290,47 @@
 
     <section id="Contact" class="contact-section">
         <h1 class="title-container" data-text="How can I help?">How can I help?</h1>
-    
-        <form class="contact-form">
-            <label>Name</label>
-            <input type="text" name="" class="text" placeholder="Chiara">
-            <label>Email</label>
-            <input type="text" name="" class="text" placeholder="chiaralinacasadei@gmail.com">
-            <label for="">Message</label>
-            <textarea class="text" placeholder="Hi! I would love to hear any suggerences for my site to improve!"></textarea>
+        <h3>Wich one do you preffer? Or maybe both?</h3>
 
-            <input type="submit" class="send-contact-btn" name="" value="Send Message">
-        </form>
+        <div class="form-or-socialmedia">
+            <form class="contact-form" id="form" action="https://formspree.io/f/meqvlqnn"
+            method="POST">
+                <label>Name</label>
+                <input type="text" placeholder="Write your name here" id="form_name" name="name" required>
+                <label>Email</label>
+                <input type="email" placeholder="Write your email here" id="form_email" name="_replyto" required>
+                <label>Message</label>
+                <textarea placeholder="Write any suggerences for my site to improve here!" id="form_message" name="message" required></textarea>
+
+                <input type="submit" class="send-contact-btn" value="Send Message" id="submit_form">
+                
+            </form>
+
+            <div class="contact-social-media">
+                <div class="sm-container" id="sm-linkimage">
+                    <a href="https://www.linkedin.com/in/c-casadei/" class="imgLink">
+                        <img src="/assets/img/icons/linkedin.svg" alt="linkedin-icon">
+                    </a>                
+                    <a href="https://www.linkedin.com/in/c-casadei/">c-casadei</a>
+                </div>
+                
+                <div class="sm-container" id="sm-linkimage">
+                    <a href="https://github.com/ChiaraLinaCasadei" class="imgLink">
+                        <img src="/assets/img/icons/github.svg" alt="github-icon">
+                    </a>                
+                    <a href="https://github.com/ChiaraLinaCasadei">ChiaraLinaCasadei</a> 
+                </div>
+
+            </div>
+        </div>
+        
     
-    
+        
     </section>
 
-
+    <footer>
+        <p>© 2021 | Chiara Lina Casadei - All rights reserved.</p>
+    </footer>
     <!--MENU FLOTANTE-->
 
     <div class="nav-Area" id="navArea">
@@ -325,7 +350,7 @@
         </div>   
     
     </div> 
-
+    <!-- INTERACCIONES CON USUARIO -->
     <script src="/js/scripts.js"></script>
 </body>
 </html>
