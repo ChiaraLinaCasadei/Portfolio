@@ -720,7 +720,7 @@ footer{
         flex-direction: column;
 
         height: 100vmin;
-        width: 10vmax;
+        width: 9vmax;
 
         font-size: 2.25vmin;
         font-family: var(--font-content);
