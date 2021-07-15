@@ -17,7 +17,7 @@ html{
 }
 body{
     
-    background-color: #ffffff;
+    background-color: var(--bgc);
 }
 
 :root{
@@ -48,7 +48,7 @@ body{
 .title-index{
     position: relative;
     margin-bottom: 2vmax;
-    padding-top: 15vmax;
+    padding-top: 10vmax;
     font-size: 4vmax;
     font-family: var(--font-title);
     font-weight: 500;
@@ -113,7 +113,7 @@ body{
     height: 5vmax;
     justify-content: center;
     align-items: center;
-    margin-top: 12vmax;
+    margin-top: 20vmax;
     margin-right: auto;
     margin-left: auto;
     font-size: 2vmax;
@@ -364,12 +364,12 @@ body{
 }
 .behind-this-project-btn{
     display: flex;
-    width: 155px;
+    width: 200px;
     height: 40px;
     align-items: center;
     justify-content: center;
     margin-top: auto;
-
+    padding: 10px;
     color: var(--sec-color);
     border: 1px solid var(--main-color);
     border-radius: 10px;
@@ -644,7 +644,7 @@ footer{
         height: 100vmin;
     }
     .title-index{
-        padding-top: 10vmax;
+        padding-top: 8vmax;
     }
     .ln-gh-container{
         display: none;
@@ -661,6 +661,7 @@ footer{
     .see-my-job-btn{
         width: 15vmax;
         height: 6vmin;
+        margin-top: 25vmin;
         margin-right: auto;
         margin-left: auto;
         font-size: 3vmin;
@@ -719,9 +720,9 @@ footer{
         flex-direction: column;
 
         height: 100vmin;
-        width: 6.5vmax;
+        width: 10vmax;
 
-        font-size: 2vmin;
+        font-size: 2.25vmin;
         font-family: var(--font-content);
         color: var(--sec-color);
         border-left: 1px solid var(--main-color);
@@ -769,13 +770,13 @@ footer{
     .about-me-content-container{
         display: flex;
         justify-content: space-around;
-        width: 95vmax;
+        width: 80vmax;
     }
     .mypic{
         display: block;
         margin-top: 10vmax;
-        width: 25vmax;
-        height: 25vmax;
+        width: 20vmax;
+        height: 20vmax;
         border: 1px solid var(--bgc);
         border-radius: 20px;  
         box-shadow: 0 0 20px var(--main-color); 
@@ -785,7 +786,7 @@ footer{
     .about-me-text-container{
         margin-top: 8vmax;
         padding-bottom: 50px;
-        width: 50vmax;
+        width: 45vmax;
         color: var(--sec-color);
         font-size: 3vmin;
     }
